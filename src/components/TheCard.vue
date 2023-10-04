@@ -19,6 +19,11 @@
 
                </div>
 
+               <green-cricle>
+
+               </green-cricle>
+               
+
 
         </main>
     </div>
@@ -27,13 +32,15 @@
 
 <script>
 
-import AdviceContent from './AdviceContent.vue'
+import AdviceContent from './AdviceContent.vue';
+import Greencricle from './GreenCricle.vue'
 export default {
 
 
     comments:{
        
         AdviceContent,
+        Greencricle,
 
     },
     name: 'TheCard',
