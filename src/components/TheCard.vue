@@ -13,10 +13,9 @@
 
                <div class="line__container">
 
-                <hr>
-                <div>|</div>
-                <div>|</div>
-                <hr>
+                
+                <img src="../assets/pattern-divider-desktop.svg" alt="" srcset="">
+                
 
                </div>
 
@@ -100,6 +99,13 @@ $Weights: 800;
   box-sizing: border-box
 }
 
+.vertical-line{
+
+font-weight: bold;
+
+}
+
+
 h3{
 
 
@@ -110,20 +116,24 @@ h3{
 }
 
 
-hr{
-    height: 0;
-    width: 50%;
-    
-}
+
 
 .line__container{
-margin-top: 2%;
-border: 2px solid white;
+margin-top: 10%;
+
 width: 70%;
-margin-left: 12%;
+margin-left: 15%;
 display: flex;
+height: 20%;
+justify-content: center;
+align-items: center;
+
+}
+
+.line__container>img{
 
 
+width: 100%;
 
 }
 
@@ -133,14 +143,15 @@ AdviceContent{
     font-size: 22px;
     font-family:'Manrope' ;
     font-weight: $Weights;
-    border: 2px solid yellow;
+    
     width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 12%;
+    margin-left: 15%;
     text-align: center;
+    letter-spacing: 10%;
 
 }
 
