@@ -1,23 +1,35 @@
 <template>
-  <div class="base">
-  <div id="app">
-    <the-card class="the-card"></the-card>
-  </div>
-</div>
+    <div>
+        
+        <h2>
+            <slot></slot>
+        </h2>
+    
+    </div>
 </template>
 
 <script>
-
-import TheCard from './components/TheCard.vue';
 export default {
-  name: 'App',
-  components: {
-    TheCard,
-  }
-}
+    name: 'AdviceContent',
+
+    data() {
+        return {
+            
+        };
+    },
+
+    mounted() {
+        
+    },
+
+    methods: {
+        
+    },
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
 //layout
 $sm:375px;
 $lg:1440px;
@@ -61,25 +73,22 @@ $Weights: 800;
   box-sizing: border-box
 }
 
-// .base{
-//   width: 100vw;
-//   border: 2px solid blueviolet;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-// }
-#app{
-  
-width: 100vw;
 
-height: 70vh;
+
+div{
+
+border: 2px solid yellow ;
 
 
 }
-
-.the-card{
-
- 
+h2{
+    color: $LightCyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
 </style>
