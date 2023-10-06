@@ -3,21 +3,25 @@
     <div class="card__wrapper">
         <main class="main1">
             <h3>ADVICE #117</h3>
-            <AdviceContent>'It is easy to sit
-             up and take
-              notice 
-              ,what's difficult
-               getting up 
-               and taking 
-               action. '</AdviceContent>
+            <AdviceContent>
+
+                {{ message }}
+               </AdviceContent>
 
                <div class="line__container">
-
                 
-                <img src="../assets/pattern-divider-desktop.svg" alt="" srcset="">
+                <img src="../assets/pattern-divider-desktop.svg">
                 
+            </div>
 
-               </div>
+         
+         <section id="dice-wrapper">
+            <div class="dice" @click="fechFunc">
+
+            <img src="../assets/icon-dice.svg" >
+
+           </div>
+        </section>
 
                <green-cricle>
 
@@ -47,7 +51,9 @@ export default {
 
     data() {
         return {
-            
+            message:'',
+            advice:'',
+        
         };
     },
 
@@ -55,7 +61,34 @@ export default {
         
     },
 
+    computed:{
+
+    
+
+
+    },
+
     methods: {
+
+        async fechFunc(){
+
+           
+            const response=await fetch('https://api.adviceslip.com/advice');
+    
+            const json=await response.json();
+
+             this.advice=json.slip.advice;
+            
+            console.log('this.advice',this.advice);
+            console.log('this is advice',json.slip.advice);
+
+            this.message=this.advice;
+            
+
+        },
+
+
+        
         
     },
 };
@@ -72,7 +105,7 @@ $lg:1440px;
 //primary
 
 $LightCyan: hsl(193, 38%, 86%);
-$NeonGreen: hsl(150, 100%, 66%);
+$NeonGreen: #52ffa8;
 
 //Neutral
 
@@ -92,7 +125,7 @@ $Fontsize: 28px;
 //font size
 @font-face {
   font-family: 'Manrope';
-  src: url('https://fonts.google.com/specimen/Manrope');
+  src: url('../assets/static/Manrope-Regular.ttf');
 }
 
 $Weights: 800;
@@ -106,6 +139,44 @@ $Weights: 800;
   box-sizing: border-box
 }
 
+
+#dice-wrapper{
+
+   border: 2px solid red;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   
+   
+}
+
+.dice{
+
+    background-color: $NeonGreen;
+    padding: 5%;
+    width:16% ;
+    border-radius: 50%;
+    margin-top: 6%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    top: 82%;
+    cursor: pointer;  
+    
+}
+
+
+
+.dice:hover::after{
+
+   
+    background: rgb(82,255,168);
+background: radial-gradient(circle, rgba(82,255,168,1) 0%, rgba(82,255,178,0.8463585263206845) 48%, rgba(99,255,177,1) 81%); 
+
+    
+}
 .vertical-line{
 
 font-weight: bold;
@@ -134,6 +205,7 @@ display: flex;
 height: 20%;
 justify-content: center;
 align-items: center;
+border: 2px solid blue;
 
 }
 
@@ -151,14 +223,14 @@ AdviceContent{
     font-family:'Manrope' ;
     font-weight: $Weights;
     
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 15%;
+    margin-left: 12%;
     text-align: center;
-    letter-spacing: 10%;
+    border: 2px solid orange;
 
 }
 
@@ -173,6 +245,8 @@ AdviceContent{
     margin-left: 35%;
     min-height: 30%;
     width: 30%;
+    border: 2px solid rgb(255, 0, 179);
+    position: relative;
 }
 .main1{
 
@@ -182,6 +256,7 @@ AdviceContent{
    width: 100%;
    min-height: 300px;
    border-radius: 15px;
+   border: 2px solid rgb(0, 204, 255);
    
 }
 
