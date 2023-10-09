@@ -2,10 +2,11 @@
     
     <div class="card__wrapper">
         <main class="main1">
-            <h3>ADVICE #117</h3>
+            <h3>ADVICE # {{number}}</h3>
             <AdviceContent>
 
-                {{ message }}
+                {{ advice }}
+
                </AdviceContent>
 
                <div class="line__container">
@@ -38,6 +39,7 @@
 
 import AdviceContent from './AdviceContent.vue';
 import Greencricle from './GreenCricle.vue'
+
 export default {
 
 
@@ -51,8 +53,8 @@ export default {
 
     data() {
         return {
-            message:'',
-            advice:'',
+            number:'',
+            advice:''
         
         };
     },
@@ -63,7 +65,8 @@ export default {
 
     computed:{
 
-    
+        
+        
 
 
     },
@@ -78,19 +81,31 @@ export default {
             const json=await response.json();
 
              this.advice=json.slip.advice;
-            
-            console.log('this.advice',this.advice);
-            console.log('this is advice',json.slip.advice);
+            this.number=json.slip.id
+             
+             console.log('this is advice',json.slip.advice);
+        
 
-            this.message=this.advice;
+        
+            
             
 
         },
 
 
+
+
         
         
     },
+
+    watch:{
+
+        
+
+
+
+    }
 };
 </script>
 
@@ -258,6 +273,29 @@ AdviceContent{
    border-radius: 15px;
    border: 2px solid rgb(0, 204, 255);
    
+}
+
+@media screen and (width>375px) {
+
+
+
+    
+}
+@media screen and (max-width:375px ) {
+
+    .card__wrapper{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .line__container{
+
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
+    
 }
 
 </style>
