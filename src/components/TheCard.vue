@@ -275,10 +275,13 @@ AdviceContent{
    
 }
 
-@media screen and (width>375px) {
+@media screen and (max-width:375px) {
 
 
-
+    .card__wrapper{
+        width: 60%;
+        margin-left: 40%;
+    }
     
 }
 @media screen and (max-width:375px ) {
