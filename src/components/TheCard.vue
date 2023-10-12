@@ -360,5 +360,21 @@ AdviceContent{
     }
     
 }
+@media screen and (min-width:1000px ){
+
+
+    
+
+
+    .line__container{
+
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
+   
+    
+}
 
 </style>
