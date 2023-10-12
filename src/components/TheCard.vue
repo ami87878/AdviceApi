@@ -182,6 +182,12 @@ $Weights: 800;
     
 }
 
+.dice:hover{
+
+ -webkit-box-shadow: 1px 0px 23px 14px #5CFFA5; 
+box-shadow: 1px 0px 23px 14px #5CFFA5;
+}
+
 
 
 .dice:hover::after{
@@ -298,6 +304,60 @@ AdviceContent{
 
     }
 
+    
+}
+@media screen and (min-width:375px ) {
+
+    .card__wrapper{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .line__container{
+
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
+    .dice{
+
+        margin-top: 8%;
+    }
+
+    
+}
+
+@media screen and (min-width:462px ){
+
+    .dice{
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width:1440px ){
+
+
+    
+    .card__wrapper{
+       
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 8%;
+    
+    }
+
+    .line__container{
+
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
+    .dice{
+
+    width: 11%;
+    margin-top: 0.5%;
+    }
     
 }
 
