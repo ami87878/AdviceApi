@@ -61,14 +61,7 @@ $Weights: 800;
   box-sizing: border-box
 }
 
-// .base{
-//   width: 100vw;
-//   border: 2px solid blueviolet;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-// }
+
 #app{
   
 width: 100vw;

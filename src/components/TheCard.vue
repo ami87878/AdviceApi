@@ -2,7 +2,7 @@
     
     <div class="card__wrapper">
         <main class="main1">
-            <h3>ADVICE # {{number}}</h3>
+            <h2>ADVICE # {{number}}</h2>
             <AdviceContent>
 
                 {{ advice }}
@@ -172,7 +172,7 @@ $Weights: 800;
     padding: 5%;
     width:16% ;
     border-radius: 50%;
-    margin-top: 6%;
+    margin-top: 10%;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -205,11 +205,11 @@ font-weight: bold;
 }
 
 
-h3{
+h2{
 
 
     color: $NeonGreen;
-    font-size: 14px;
+    font-size: 16px;
    text-align: center;
    margin-top: 6%;
 }
