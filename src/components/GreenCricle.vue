@@ -32,11 +32,7 @@ export default {
 width: 100%;
 
 }
-.img-wrapper:hover{
 
-
-
-}
 
 .img-wrapper>img{
 
@@ -44,4 +40,5 @@ width: 100%;
 width: 100%;
 
 }
+
 </style>

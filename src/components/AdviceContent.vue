@@ -77,7 +77,7 @@ $Weights: 800;
 
 div{
 
-border: 2px solid yellow ;
+
 
 
 }

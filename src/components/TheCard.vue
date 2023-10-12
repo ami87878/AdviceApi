@@ -157,7 +157,7 @@ $Weights: 800;
 
 #dice-wrapper{
 
-   border: 2px solid red;
+   
    display: flex;
    justify-content: center;
    align-items: center;
@@ -226,7 +226,7 @@ display: flex;
 height: 20%;
 justify-content: center;
 align-items: center;
-border: 2px solid blue;
+
 
 }
 
@@ -251,7 +251,7 @@ AdviceContent{
     align-items: center;
     margin-left: 12%;
     text-align: center;
-    border: 2px solid orange;
+
 
 }
 
@@ -266,7 +266,7 @@ AdviceContent{
     margin-left: 35%;
     min-height: 30%;
     width: 30%;
-    border: 2px solid rgb(255, 0, 179);
+
     position: relative;
 }
 .main1{
@@ -277,7 +277,7 @@ AdviceContent{
    width: 100%;
    min-height: 300px;
    border-radius: 15px;
-   border: 2px solid rgb(0, 204, 255);
+   
    
 }
 
@@ -321,8 +321,8 @@ AdviceContent{
     }
 
     .dice{
-
-        margin-top: 8%;
+    
+        margin-top: 2%;
     }
 
     
